@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym Payment Section</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  .payment-section {
+    height: 100vh;
+    background: url('https://th.bing.com/th/id/R.540abb21db3233f3b557eef17a8b8b4a?rik=aj84e0Qoip0ItQ&riu=http%3a%2f%2fwallsdesk.com%2fwp-content%2fuploads%2f2016%2f10%2fGym-HD-Background-.jpg&ehk=gFDF4wdIAjzQk8lkZ8BVraUl9Z5vFc%2feAignb5pfHgs%3d&risl=&pid=ImgRaw&r=0') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .payment-card {
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 420px;
+    color: white;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+    animation: fadeInUp 1s ease;
+  }
+  @keyframes fadeInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .payment-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #ff4b2b;
+  }
+  .payment-card label {
+    font-weight: 500;
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+  }
+  .payment-card input, .payment-card select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 15px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 14px;
+  }
+  .payment-card input::placeholder {
+    color: #ddd;
+  }
+  .payment-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .payment-btn:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255,75,43,0.6);
+  }
+</style>
+</head>
+<body>
+
+<section class="payment-section">
+  <div class="payment-card">
+    <h2>💪 Gym Membership</h2>
+    <form>
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your name" required>
+
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Membership Plan</label>
+      <select required>
+        <option value="">Select a plan</option>
+        <option value="1month">1 Month - $50</option>
+        <option value="3months">3 Months - $120</option>
+        <option value="6months">6 Months - $200</option>
+        <option value="1year">1 Year - $350</option>
+      </select>
+
+      <label>Card Number</label>
+      <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+
+      <label>Expiry Date</label>
+      <input type="month" required>
+
+      <label>CVV</label>
+      <input type="password" placeholder="***" required>
+
+      <button type="submit" class="payment-btn">Pay Now</button>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>
